@@ -97,6 +97,7 @@
     
       containerDom.style.height = maxObject.top + maxObject.height + gab + 'px';
     ```
+
 ## 方案2 -- flex
 * 布局：`flex`
 * 步骤：
@@ -120,6 +121,7 @@
         </div>
     </div>
     ```
+
 ## 方案3 -- multi-columns
 * 布局：`Multi-columns`
 * 步骤：
