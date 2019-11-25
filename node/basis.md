@@ -2,6 +2,7 @@
 > 更新时间：2019.11.24
 ## 基本概念
 > 关键词：`require`, `exports`, `module`
+
 * require
   * 概念：该函数用于在当前模块加载和使用别的模块。传入模块名，返回模块对象。
   * 用法
@@ -33,7 +34,7 @@
 * 模块初始化
   * 概念：一个模块中的`JS`代码仅在模块第一次被使用时执行一次，并在执行过程中初始化模块的导出对象。之后，缓存起来的导出对象被重复利用。 
   * 示例
-    ```
+    ```js
     // counter.js
     var i = 0;
 
@@ -52,8 +53,24 @@
     console.log(counter2.count());  // 3
     // 可以看出, counter.js 并没有因为被 require 了两次而初始化两次
     ```
-  * 原因
-    * `Node.js`使用 `CommonJS` 模块规范，其他相似的模块规范链接。请点击[查看](https://juejin.im/post/5c17ad756fb9a049ff4e0a62) 
-  <br>![模块化规范](https://wuqiongjie.github.io/qjie-note/static/module-rule.png);     
+  * 模块化规范的其他知识
+    * `Node.js`使用 `CommonJS` 模块规范，其他相似的模块规范请点击点击[查看](https://juejin.im/post/5c17ad756fb9a049ff4e0a62) <br>
+  <br>![模块化规范](https://wuqiongjie.github.io/qjie-note/static/module-rule.png)   
+
 ## 内置模块
-> 关键词：`fs`, `path`, `buffer`, `stream`, `url`
+> 关键词：`fs`, `path`, `Buffer`, `stream`, `url`
+
+* `fs`模块
+  * api文档：http://nodejs.cn/api/fs.html
+* `Buffer`模块（数据块）
+  * api文档：http://nodejs.cn/api/buffer.html
+* `Stream`模块（数据流）
+  * api文档：http://nodejs.cn/api/stream.html
+* `Path`模块（文件路径）
+  * api文档：http://nodejs.cn/api/path.html
+* `Url`模块（请求地址路径）
+  * api文档：http://nodejs.cn/api/url.html
+* `Querystring`模块（解析和格式化 url）
+  * api文档：http://nodejs.cn/api/querystring.html
+* `http`模块（创建客户端或服务端）
+  * api文档：http://nodejs.cn/api/http.html    
