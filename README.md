@@ -4,15 +4,15 @@
 ### 目录
 * HTML
 * CSS
-  * [瀑布流布局](https://wuqiongjie.github.io/qjie-note/#/css/waterfall-update)
-  * [垂直、水平居中](https://wuqiongjie.github.io/qjie-note/#/css/center)
+  * [瀑布流布局](css/waterfall-update)
+  * [垂直、水平居中](css/center)
 * JavaScript
 * node
-  * [基础](https://wuqiongjie.github.io/qjie-note/#/node/basis)
+  * [Module相关](node/module)
 * 浏览器
-  * [多标签页之间的通讯方式](https://wuqiongjie.github.io/qjie-note/#/browser/page-communication)
-* [兼容问题](https://wuqiongjie.github.io/qjie-note/#/compatible/compatible)
-* [关于](https://wuqiongjie.github.io/qjie-note/#/about)  
+  * [多标签页之间的通讯方式](browser/page-communication)
+* [兼容问题](compatible/compatible)
+* [关于](about)  
 
 ### 个人联系方式
 * 邮箱：1278300161@qq.com

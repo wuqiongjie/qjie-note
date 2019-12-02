@@ -1,8 +1,12 @@
 # 浏览器多标签页之间的通讯方式
-> 应用业务场景：A 标签页打开B 标签页，B 发送消息给 A，然后 A 进行一个操作<br>
-> 更新时间：2019.11.23
+> 更新时间：2019.11.30
 
-## localstorage
+本文主要记录如下内容：
+* 浏览器多标签页之间的通讯方式
+
+## 方案1
+> 使用`localstorage`本地存储实现
+
 * 用法
   * A 标签页： 监听`storage`事件
   * B 标签页： 调用`localStorage.setItem`方法
@@ -25,7 +29,9 @@
 * 其他
   * [localStroage 相关 API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
-## postMessage
+## 方案2
+> 使用`window.postMessage`实现
+
 * 用法
     * 获取`window`对象：**A** 通过 `window.open`或者`iframe`获取 **B** 的`window`对象, **B** 可以通过`window.opener`来获取通讯对象（不是`window`对象）
     * 监听`message`事件：**A**, **B** 都监听`message`事件，即`window.addEventListener("message", function(event) {})`
@@ -63,7 +69,9 @@
 * 其他
     * [postMessage 相关 API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
 
-## SharedWorker
+## 方案3
+> 使用`SharedWorker`实现
+
 * 用法
     * 服务端添加`sharedWorker.js`，用于客户端创建`SharedWorker`对象
     * 标签页创建`SharedWorker`对象：新打开的标签页必须创建`SharedWorker`对象，才能接收到其他标签页传送的信息

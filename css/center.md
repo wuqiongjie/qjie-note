@@ -1,6 +1,10 @@
 # 垂直、水平居中
 > 更新时间：2019.11.23
 
+本文主要记录内容：
+* 行内元素的水平垂直居中方式
+* 块级元素的水平垂直居中方式
+
 ## 行内元素
 > 方式一： text-align + line-height
 
@@ -186,5 +190,6 @@
 </html>
 
 ```
-* 参考
-  * [探秘 flex 上下文中神奇的自动 margin](https://www.cnblogs.com/coco1s/p/10910588.html)
+> 参考文章
+
+* [探秘 flex 上下文中神奇的自动 margin](https://www.cnblogs.com/coco1s/p/10910588.html)

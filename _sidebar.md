@@ -4,7 +4,7 @@
   * [垂直、水平居中](css/center)
 * JavaScript
 * node
-  * [基础](node/basis)
+  * [Module相关](node/module)
 * 浏览器
   * [多标签页之间的通讯方式](browser/page-communication)
 * [兼容问题](compatible/compatible)
