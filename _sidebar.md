@@ -2,6 +2,7 @@
 * CSS
   * [瀑布流布局](css/waterfall-update)
   * [垂直、水平居中](css/center)
+  * [选择器](css/selector)
 * JavaScript
 * node
   * [Module相关](node/module)

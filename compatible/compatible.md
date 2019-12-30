@@ -55,3 +55,6 @@ iframe {    /* 解决 ios 下，iframe 宽度被 iframe 内容撑开问题，配
   var fontSize = $('html').css('fontSize');
   var baseFontSize = ratio * fontSize;  // 放大倍数，解决模糊的问题
   ```
+  ## IE 兼容问题
+  * `img`标签不支持流，后台尽量返回`Content-type: image/png`格式
+  * ie中的`dom`节点并不存在`append`方法，`jQuery`可以的原因是内部使用了`appendChild`方法
