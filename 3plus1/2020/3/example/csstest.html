@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css3基础学习</title>
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+      padding: 0
+    }
+    .transformTest{
+      width: 200px;
+      height: 200px;
+      background-color: black;
+    }
+
+    .transformTest:hover {
+      width: 300px;
+      height: 300px;
+      transition: all .2s ease;
+    }
+
+    @keyframes animationTest {
+      from {
+        transform: rotate(30deg);
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+      }
+      to {
+        transform: rotate(270deg);
+        width: 400px;
+        height: 400px;
+        line-height: 400px;
+      }
+    }
+
+    .animationTest {
+      margin-top: 200px;
+      margin-left: 100px;
+      width: 200px;
+      height: 200px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      line-height: 200px;
+      font-size: 18px;
+    }
+
+    .animationTest:hover {
+      animation: animationTest 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="transformTest">旋转转换</div>
+  <div class="animationTest">动画转换</div>
+</body>
+</html>
