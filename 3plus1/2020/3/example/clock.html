@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS 实现钟表刻度</title>
+  <style>
+    html,body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black
+    }
+    .clockContainer {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: black;
+      border: 10px solid #fff;
+    }
+    .point {
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .hour {
+      width: 10px;
+      height: 120px;
+      background: red;
+      position: absolute;
+      border-radius: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 25px;
+    }
+    .min {
+
+    }
+    .second {
+
+    }
+  </style>
+</head>
+<body>
+  <div class="clockContainer">
+    <div class="point"></div>
+    <div class="hour"></div>
+    <div class="min"></div>
+    <div class="second"></div>
+  </div>
+</body>
+</html>

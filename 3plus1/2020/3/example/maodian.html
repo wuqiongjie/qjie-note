@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>测试锚点</title>
+  <style>
+    html,body {
+      margin: 0;
+      padding: 0;
+    }
+    .test1 {
+      height: 300px;
+      margin-top: 800px;
+      background-color: red;
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+      line-height: 300px;
+    }
+
+    .test2 {
+      height: 300px;
+      margin-top: 400px;
+      background-color: green;
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+      line-height: 300px;
+    }
+
+    .otherOrigin {
+      margin-top: 200px;
+      margin-bottom: 200px;
+      font-size: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <a href="#test1">点我跳转到test1区域</a>
+  <a href="#test2">点我跳转到test2区域</a>
+  <div id="test1" class="test1">test1区域</div>
+  <div class="otherOrigin">无用区域</div>
+  <div id="test2" class="test2">test2区域</div>
+</body>
+</html>
