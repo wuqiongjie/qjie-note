@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>js 实现马赛克场景</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #testImg {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="test" width="500" height="500"></canvas>
+  <img src="./localStorage.png" alt="测试图片" id="testImg">
+</body>
+</html>
+<script>
+
+  window.PixelUtils = {
+    getPixelInfo: function(imgData, x, y) {
+      let color = [];
+      let width = imgData.width;
+      
+      color[0] = imgData.data[(width * y + x)*4 + 0];
+      color[1] = imgData.data[(width * y + x)*4 + 1];
+      color[2] = imgData.data[(width * y + x)*4 + 2];
+      color[3] = imgData.data[(width * y + x)*4 + 3];
+
+      return color;
+    },
+
+    setPixelInfo: function(imgData, x, y, colors){
+      let width = imgData.width;
+
+      imgData[(width * y + x) * 4 + 0] = colors[0];
+      imgData[(width * y + x) * 4 + 1] = colors[1];
+      imgData[(width * y + x) * 4 + 2] = colors[2];
+      imgData[(width * y + x) * 4 + 3] = colors[3];
+    }
+  };
+
+  window.onload = function(){
+    let canvas = document.getElementById("test");
+    let context = canvas.getContext('2d');
+    // 创建图片临时节点
+    let newImage = new Image();
+    newImage.src = './localStorage.png';
+    // 图片加载
+    newImage.onload = function(e) {
+      context.drawImage(newImage, 0, 0, 250, 400);
+
+      let size = 5;
+      // 获取旧图所有像素点
+      let oldImg = context.getImageData(0, 0, 250, 400);
+      // 创建新图像素对象
+      let newImg = context.createImgData(250, 400);
+
+      oldImg.width.forEach((wItem, wIndex) => {
+        oldImg.height.forEach((hItem, hIndex) => {
+          let color = 
+            window.PixelUtils.getPixelInfo(oldImg, Math.floor(wIndex * size + Math.random()*5), Math.floor(hIndex * size + Math.random()*5));
+          // 写入
+          for(let a = 0; a < size; a++) {
+            for(let b = 0; b < site; b++) {
+              window.PixelUtils.setPixelInfo(newImg, wIndex * size + a, hIndex * size + b, color);
+            }
+          }
+        })
+      })
+      
+      // 输出图片
+      context.putImageData(newImg, 250, 0);
+
+    }
+  }
+</script>
