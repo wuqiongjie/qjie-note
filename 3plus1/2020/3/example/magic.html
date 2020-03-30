@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>简单实现魔方</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d; /* 开启3D空间 */
+    transform: rotateX(-30deg) rotateY(-80deg); /* 进行旋转 */
+  }
+
+  
+  .magic {
+    width: 200px;
+    height: 200px;
+    opacity: .5;  /* 设置透明度 */
+    position: absolute; 
+    line-height: 200px;
+    text-align: center;
+    transition: .4s;  
+  }
+
+  .magic1 {
+    background: red;
+    transform: rotateX(90deg) translateZ(100px);
+  }
+
+  .magic2 {
+    background: green;
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+
+  .magic3 {
+    background: blue;
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+
+  .magic4 {
+    background: yellow;
+    transform: rotateY(90deg) translateZ(100px);
+  }
+
+  .magic5 {
+    background: orange;
+    transform: rotateY(180deg) translateZ(100px);
+  }
+
+  .magic6 {
+    background: turquoise;
+    transform: rotateY(0deg) translateZ(100px);
+  }
+
+  
+  </style>
+</head>
+<body>
+    <div class="magic magic1">1</div>
+    <div class="magic magic2">2</div>
+    <div class="magic magic3">3</div>
+    <div class="magic magic4">4</div>
+    <div class="magic magic5">5</div>
+    <div class="magic magic6">6</div>
+</body>
+</html>
