@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>粘性布局示例</title>
+  <style>
+    html,body {
+      margin: 0;
+      padding: 0;
+    }
+    .container1 { 
+      height: 600px;
+      background: red;
+      margin-bottom: 20px;
+    }
+    .container2 {
+      height: 800px;
+      background: blue;
+      margin-top: 20px;
+    }
+    .stickyContainer {
+      position: sticky;
+      top: -1px;
+      height: 100px;
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="container1">没用的高度容器</div>
+  <div class="stickyContainer">看看我，我是有粘性的</div>
+  <div class="container2">没用的高度容器</div>
+  <div class="container2">没用的高度容器</div>
+</body>
+</html>
