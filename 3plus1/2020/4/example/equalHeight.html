@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>等高布局实现</title>
+  <style>
+    .test1 {
+      display: flex;
+    }
+
+    .test2 {
+      display: table;
+      margin-top: 20px;
+    }
+
+    .test2Left {
+      width: 100px;
+      display: table-cell;
+    }
+
+    .test2Right {
+      width: 100px;
+      display: table-cell;
+    }
+
+    .test3 {
+      margin-top: 20px;
+      display: grid;
+      grid-auto-flow: column;
+    }
+
+    .testLeftBg {
+      background: red;
+    }
+
+    .testRightBg {
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+  <!-- 方式一：使用 flex 布局实现 -->
+  <div class="test1">
+    <div class="testLeftBg">我是左边容器</div>
+    <div class="testRightBg">我是右边容器</div>
+  </div>
+
+  <!-- 方式二：使用 table 布局实现 -->
+  <div class="test2">
+    <div class="testLeftBg test2Left">我是左边容器</div>
+    <div class="testRightBg test2Right">我是右边容器</div>
+  </div>
+
+  <!-- 方式三：使用 grid 布局实现 -->
+  <div class="test3">
+    <div class="test3Left testLeftBg">我是左边容器</div>
+    <div class="test3Right testRightBg">我是右边容器</div>
+  </div>
+</body>
+</html>

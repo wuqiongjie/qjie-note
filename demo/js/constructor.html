@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>原型链</title>
+</head>
+<body>
+  <script>
+    /* 原型练习 */
+    function User(name) {
+      this.name = name;
+    }  
+
+    User.prototype.show = function(){
+      console.log(this.name);
+    }
+
+    let user = new User.prototype.constructor("list");
+    user.show();
+
+    /* apply or call 练习 */
+    // 记住数组的sort 方法中 (a, b)中若 a - b，则为升序， b - a 则为降序。！！！！
+    // apply(xx, [args])：apply会将 args 展开
+    // call(xx, this)：call多参数
+    let test = {
+      data: [100, 10 ,20, 120, 90],
+    }
+
+    Object.setPrototypeOf(test, {
+      max(data) {
+        return data.sort((a, b) => b - a )[0]
+      }
+    })
+
+    console.log(test.max(test.data));
+    let hh = {
+      lessions: { 'js': 99, 'node': 100, 'python': 88, 'java': 120},
+    }
+
+    console.log(test.max.call(hh, Object.values(hh.lessions)));
+    // console.log(test.max.apply(null, Object.values(hh.lessions)));
+
+    // 父类构造函数初始化属性值
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    Person.prototype.show = function() {
+      console.log(this.name, this.age);
+    }
+
+    function Admin(name, age) {
+      Person.call(this, name, age); // 借用父类构造函数初始化属性
+    }
+
+    Admin.prototype.__proto__ = Person.prototype;
+    let xiaowu = new Admin("xiaowu", 18);
+    xiaowu.show();
+  </script>
+</body>
+</html>
