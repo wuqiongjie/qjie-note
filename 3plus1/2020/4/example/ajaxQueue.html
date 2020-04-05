@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ajax 请求队列实现</title>
+</head>
+<body>
+
+</body>
+<script>
+let ajaxQueue = [];
+// 添加请求
+function addAjax(options) {
+  let emptyFunc = function() {};
+  let defaultOptions = {
+    url: options.url || "",
+    params: options.params || {},
+    data: options.data || {},
+    method: options.method || "GET",
+    success: options.success || emptyFunc,
+    error: options.error || emptyFunc,
+  }
+
+  let isExit = ajaxQueue.some(item => {
+    item.url === defaultOptions.url;
+  });
+
+  if(isExit) {
+    ajaxQueue.forEach(item => {
+      if(item.url === defaultOptions.url) { // 替换
+        Object.assign(item, defaultOptions);
+      }
+    })
+  }else {
+    ajaxQueue.push(defaultOptions);
+  }
+}
+
+// 执行请求
+function executeAjax(preResult) {
+  if(ajaxQueue.length) {
+    let option = ajaxQueue.shift();
+    $.ajax({
+      url: option.url,
+      method: option.method,
+      data: option.data,
+      success: function(res) {
+        option.success(res);
+        executeAjax(res);
+      },
+      error: function(error) {
+        option.error(error);
+      }
+    })
+  }
+  
+}
+
+
+</script>
+</html>
