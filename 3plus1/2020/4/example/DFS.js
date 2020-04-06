@@ -48,4 +48,3 @@ function findParent(dataList, aimId) {
 }
 
 findParent(dataList, 3);
-console.log(stack);
