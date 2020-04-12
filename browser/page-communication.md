@@ -22,9 +22,9 @@
     // 注意：A 标签页如果调用 localStorage.setItem 是不会触发该页面的 storage 事件的
     ```
 * 效果
-    <br>![localStorage标签页通讯展示](https://wuqiongjie.github.io/gif/localStorage.gif)
+    <br>![localStorage标签页通讯展示](https://wuqiongjie.github.io/qjie-note/gif/localStorage.gif)
 * 兼容
-  <br>![localStorage兼容性](https://wuqiongjie.github.io/static/localStorage.png)
+  <br>![localStorage兼容性](https://wuqiongjie.github.io/qjie-note/static/localStorage.png)
 * 不足：同源限制，不支持跨域
 * 其他
   * [localStroage 相关 API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
@@ -61,9 +61,9 @@
     Awin.postMessage("hello A, i am from B", "https://www.baidu.com");
     ```
 * 展示
-    <br>![postMessage示例](https://wuqiongjie.github.io/gif/postMessage.gif)
+    <br>![postMessage示例](https://wuqiongjie.github.io/qjie-note/gif/postMessage.gif)
 * 兼容
-    <br>![postMessage兼容](https://wuqiongjie.github.io/static/postMessage.png)
+    <br>![postMessage兼容](https://wuqiongjie.github.io/qjie-note/static/postMessage.png)
 * 好处：支持跨域，推荐
 * 其他
     * [postMessage 相关 API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
@@ -98,9 +98,9 @@
     }
     ```
 * 展示
-    <br>![sharedWorker展示](https://wuqiongjie.github.io/gif/sharedWorker.gif)
+    <br>![sharedWorker展示](https://wuqiongjie.github.io/qjie-note/gif/sharedWorker.gif)
 * 兼容
-    <br>![sharedWorker兼容性](https://wuqiongjie.github.io/static/sharedWorker.png)
+    <br>![sharedWorker兼容性](https://wuqiongjie.github.io/qjie-note/static/sharedWorker.png)
 * 不足：只能同源，并且`sharedWorker.js`文件放在服务端,兼容性一般
 * 其他
     * [sharedWorker 相关 API ](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker)   
