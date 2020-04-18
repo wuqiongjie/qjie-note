@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>居中半透明的模态框</title>
+  <style>
+    html,body {
+      margin: 0;
+      padding: 0;
+    }
+    .modal {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .modal .modalBg {
+      background: rgba(0, 0, 0, .5);
+      width: 100%;
+      height: 100%;
+    }
+
+    .modal .modalContainer {
+      background: rgba(255,255,255,.5);
+      height: 500px;
+      position: absolute;
+      width: 500px;
+      top: 0;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      border-radius: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div>这是body中的内容</div>
+  <div class="modal">
+    <div class="modalBg"></div>
+    <div class="modalContainer">
+        哈哈哈哈这是内容
+    </div>
+  </div>
+</body>
+</html>
