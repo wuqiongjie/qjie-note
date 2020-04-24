@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全屏布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: row;
+    }
+
+    header,footer {
+      height: 80px;
+      background: grey;
+      color: #fff;
+      line-height: 80px;
+      font-size: 20px;
+    }
+    
+    main {
+      flex: 1;
+      overflow: auto;
+      position: relative;
+    }
+
+    .leftContainer {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 200px;
+      background: red;
+    }
+
+    .rightContainer {
+      padding-left: 200px;
+      background: blueviolet;
+      height: 100%;
+      overflow: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <header>这是头部部分</header>
+  <main>
+    <div class="leftContainer">这是左边部分</div>
+    <div class="rightContainer">
+      <div style="height: 1600px;">右边内容</div>
+    </div>
+  </main>
+  <footer>这是底部</footer>
+</body>
+</html>
